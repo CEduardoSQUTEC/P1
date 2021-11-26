@@ -18,21 +18,21 @@
 
 #include <iostream>
 
-namespace utec
-{
+namespace utec {
 
-class r_tree
-{
-private:
+    class r_tree {
+    private:
 
-public:
-	r_tree();
+    public:
+        r_tree();
 
-	friend std::istream& operator>>(std::istream& is, r_tree& rt);
-	friend std::ostream& operator<<(std::ostream& os, const r_tree& rt);
-};
+        friend std::istream &operator>>(std::istream &is, r_tree &rt);
 
-std::istream& operator>>(std::istream& is, r_tree& rt);
-std::ostream& operator<<(std::ostream& os, const r_tree& rt);
+        friend std::ostream &operator<<(std::ostream &os, const r_tree &rt);
+    };
+
+    std::istream &operator>>(std::istream &is, r_tree &rt);
+
+    std::ostream &operator<<(std::ostream &os, const r_tree &rt);
 
 };
